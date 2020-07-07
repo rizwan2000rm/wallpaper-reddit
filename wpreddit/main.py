@@ -34,7 +34,7 @@ def run():
         if config.startup:
             connection.wait_for_connection(config.startupattempts, config.startupinterval)
         # make sure you're actually connected to reddit
-        if not connection.connected("http://www.reddit.com"):
+        if not connection.connected("https://www.reddit.com/"):
             print("ERROR: You do not appear to be connected to Reddit. Exiting")
             sys.exit(1)
         links = reddit.get_links()
